@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import api from "./services/api";
 
 import {
   SafeAreaView,
@@ -9,7 +10,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import api from "./services/api";
+
 
 export default function App() {
   const [repositories, setRepositories] = useState([])
@@ -59,7 +60,7 @@ export default function App() {
                     style={styles.likeText}
                     testID={`repository-likes-${repository.id}`}
                   >
-                    {repository.likes} curtida(s)
+                    {repository.likes} curtidas
                   </Text>
                 </View>
 
